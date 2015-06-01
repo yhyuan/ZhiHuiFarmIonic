@@ -11,11 +11,12 @@ Meteor.startup(function () {
           }
       });
   }
-  if (Contacts.find({}).count() === 0) {
+/*
+  if (Fields.find({}).count() === 0) {
     _(20).times(function(n) {
       var user = Fake.user();
 
-      Contacts.insert({
+      Fields.insert({
         name: {
           first: user.name,
           last: user.surname
@@ -33,5 +34,5 @@ Meteor.startup(function () {
       });
     });
   }
-
+*/
 });

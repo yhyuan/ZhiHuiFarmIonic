@@ -1,6 +1,6 @@
-<template name="contactsShow">
+<template name="fieldsShow">
   {{#contentFor "headerButtonLeft"}}
-    {{>ionNavBackButton path="contacts" text="Contacts"}}
+    {{>ionNavBackButton path="fields" text="Fields"}}
   {{/contentFor}}
 
   {{#contentFor "headerTitle"}}
@@ -8,12 +8,12 @@
   {{/contentFor}}
 
   {{#contentFor "headerButtonRight"}}
-    <button class="button button-clear" data-ion-modal="_contactsEdit" data-id="{{contact._id}}">Edit</button>
+    <button class="button button-clear" data-ion-modal="_fieldsEdit" data-id="{{field._id}}">Edit</button>
   {{/contentFor}}
 
   {{#ionView}}
     {{#ionContent class="padding contact-detail"}}
-      {{#with contact}}
+      {{#with field}}
         <div class="list card">
 
           <div class="item item-avatar">

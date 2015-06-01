@@ -5,5 +5,5 @@ Template.profile.events({
 });
 
 Accounts.onLogin(function() {
-	Router.go('\contacts');
+	Router.go('/fields');
 });

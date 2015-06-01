@@ -1,10 +1,10 @@
-Template.contactsShow.created = function () {
+Template.fieldsShow.created = function () {
   this.autorun(function () {
-    this.subscription = Meteor.subscribe('contact', Router.current().params._id);
+    this.subscription = Meteor.subscribe('field', Router.current().params._id);
   }.bind(this));
 };
 
-Template.contactsShow.rendered = function () {
+Template.fieldsShow.rendered = function () {
   this.autorun(function () {
     if (!this.subscription.ready()) {
       IonLoading.show();
@@ -14,9 +14,9 @@ Template.contactsShow.rendered = function () {
   }.bind(this));
 };
 
-Template.contactsShow.helpers({
-  contact: function () {
-    return Contacts.findOne({_id: Router.current().params._id});
+Template.fieldsShow.helpers({
+  field: function () {
+    return Fields.findOne({_id: Router.current().params._id});
   },
 
   activeLabel: function () {
@@ -28,7 +28,7 @@ Template.contactsShow.helpers({
   }
 });
 
-Template.contactsShow.events({
+Template.fieldsShow.events({
   'click [data-action=fake]': function (event, template) {
     event.preventDefault();
     alert('Gotcha!');

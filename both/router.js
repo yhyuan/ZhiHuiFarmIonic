@@ -7,11 +7,11 @@ Router.map(function() {
     path: '/'
   });
   
-  this.route('contacts', {
-    path: '/contacts'
+  this.route('fields', {
+    path: '/fields'
   });
 
-  this.route('contacts.show', {
-    path: '/contacts/:_id'
+  this.route('fields.show', {
+    path: '/fields/:_id'
   });
 });

@@ -1,7 +1,7 @@
-Meteor.publish('contacts', function() {
-  return Contacts.find();
+Meteor.publish('fields', function() {
+  return Fields.find();
 });
 
-Meteor.publish('contact', function(_id) {
-  return Contacts.find({_id: _id});
+Meteor.publish('field', function(_id) {
+  return Fields.find({_id: _id});
 });

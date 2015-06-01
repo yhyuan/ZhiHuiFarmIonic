@@ -12,14 +12,14 @@
 
     {{#if isAndroid}}
       {{#ionTabs style="android"}}
-        {{> ionTab title="Fields" path="contacts" icon="leaf"}}
+        {{> ionTab title="Fields" path="fields" icon="leaf"}}
         {{> ionTab title="Insurance" path="insurance" icon="umbrella"}}
         {{> ionTab title="Notifications" path="notifications" icon="android-notifications"}}
         {{> ionTab title="Profile" path="profile" icon="android-happy"}}
       {{/ionTabs}}
     {{else}}
       {{#ionTabs style="ios"}}
-        {{> ionTab title="Fields" path="contacts" icon="leaf" class="tab-item-positive"}}
+        {{> ionTab title="Fields" path="fields" icon="leaf" class="tab-item-positive"}}
         {{> ionTab title="Insurance" path="insurance" icon="umbrella" class="tab-item-positive"}}
         {{> ionTab title="Notifications" path="notifications" iconOff="ios-bell-outline" iconOn="ios-bell" class="tab-item-positive"}}
         {{> ionTab title="Profile" path="profile" iconOff="ios-person-outline" iconOn="ios-person" class="tab-item-positive"}}

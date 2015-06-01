@@ -1,12 +1,12 @@
-Template._contactsEdit.helpers({
-  contact: function () {
+Template._fieldsEdit.helpers({
+  field: function () {
     var template = Template.instance();
-    return Contacts.findOne({_id: template.data.id});
+    return Fields.findOne({_id: template.data.id});
   }
 });
 
 AutoForm.hooks({
-  'contacts-edit-form': {
+  'fields-edit-form': {
     onSuccess: function (operation, result, template) {
       IonModal.close();
     },
