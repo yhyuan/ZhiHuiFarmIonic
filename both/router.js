@@ -3,8 +3,12 @@ Router.configure({
 });
 
 Router.map(function() {
-  this.route('contacts', {
+  this.route('profile', {
     path: '/'
+  });
+  
+  this.route('contacts', {
+    path: '/contacts'
   });
 
   this.route('contacts.show', {
