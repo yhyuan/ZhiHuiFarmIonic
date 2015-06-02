@@ -40,7 +40,7 @@ AutoForm.addInputType('polygonMap', {
   }
 });
 
-Template.afMap.created = function() {
+Template.afPolygonMap.created = function() {
   return GoogleMaps.load({
     libraries: 'places'
   });
@@ -126,7 +126,7 @@ var initTemplateAndGoogleMaps = function() {
   })(this));
 };
 
-Template.afMap.rendered = function() {
+Template.afPolygonMap.rendered = function() {
   return this.autorun((function(_this) {
     return function() {
       return GoogleMaps.loaded() && initTemplateAndGoogleMaps.apply(_this);
@@ -134,7 +134,7 @@ Template.afMap.rendered = function() {
   })(this));
 };
 
-Template.afMap.helpers({
+Template.afPolygonMap.helpers({
   schemaKey: function() {
     return this.atts['data-schema-key'];
   },
@@ -161,7 +161,7 @@ Template.afMap.helpers({
   }
 });
 
-Template.afMap.events({
+Template.afPolygonMap.events({
   'click .js-locate': function(e, t) {
     e.preventDefault();
     if (!navigator.geolocation) {
