@@ -1,21 +1,19 @@
-<template name="fieldsNew">
+<template name="fieldsEdit">
   {{#contentFor "headerButtonLeft"}}
-    {{>ionNavBackButton text="地块列表" path="fields"}}
+    {{>ionNavBackButton text="地块" path="fields.show"}}
   {{/contentFor}}
 
   {{#contentFor "headerTitle"}}
-    <h1 class="title">新地块</h1>
+    <h1 class="title">地块编辑</h1>
   {{/contentFor}}
 
   {{#contentFor "headerButtonRight"}}
-    <a class="button button-clear" data-action="submitField">{{> ionIcon icon="android-done-all"}}</a>
+    <a class="button button-clear" data-action="submitEditField">{{> ionIcon icon="android-done-all"}}</a>
   {{/contentFor}}
 
   {{#ionView}}
     {{#ionContent}}
       <div id="map" class="map"></div>
-
-
     {{/ionContent}}
   {{/ionView}}
 </template>

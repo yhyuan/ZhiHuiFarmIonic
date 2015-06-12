@@ -260,4 +260,4 @@ Schemas.Fields = new SimpleSchema({
   }
 });
 
-Fields.attachSchema(Schemas.Fields);
+//Fields.attachSchema(Schemas.Fields);

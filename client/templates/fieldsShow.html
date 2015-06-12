@@ -1,14 +1,15 @@
 <template name="fieldsShow">
   {{#contentFor "headerButtonLeft"}}
-    {{>ionNavBackButton path="fields" text="Fields"}}
+    {{>ionNavBackButton path="fields" text="地块列表"}}
   {{/contentFor}}
 
   {{#contentFor "headerTitle"}}
-    <h1 class="title">Details</h1>
+    <h1 class="title">地块信息</h1>
   {{/contentFor}}
 
   {{#contentFor "headerButtonRight"}}
-    <button class="button button-clear" data-ion-modal="_fieldsEdit" data-id="{{field._id}}">Edit</button>
+    <!--<a href="{{pathFor 'fields.edit'}}" class="button button-clear">{{> ionIcon icon="edit"}}</a>-->
+    <a href="{{pathFor route='fields.edit' data = getPost }}" class="button button-clear">{{> ionIcon icon="edit"}}</a>
   {{/contentFor}}
 
   {{#ionView}}
@@ -17,17 +18,17 @@
         <div class="list card">
 
           <div class="item item-avatar">
-            <img src="{{avatarUrl}}">
-            <h2>{{name.first}} {{name.last}}</h2>
-            <p>{{location.city}}, {{location.state}}</p>
+            <!--<img src="{{avatarUrl}}">-->
+            <h2>{{name}}</h2>
+            <p>city, state</p>
           </div>
 
           <div class="item item-body">
-            {{{activeLabel}}}
+            activeLabel
 
             <h4>Notes</h4>
             <p>
-              {{details.notes}}
+              details.notes
             </p>
           </div>
 
