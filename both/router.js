@@ -11,7 +11,12 @@ Router.map(function() {
     path: '/fields'
   });
 
+  this.route('fields.new', {
+    path: '/fields/new'
+  });
+
   this.route('fields.show', {
     path: '/fields/:_id'
   });
+
 });

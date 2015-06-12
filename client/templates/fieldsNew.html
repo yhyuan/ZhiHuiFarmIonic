@@ -1,0 +1,19 @@
+<template name="fieldsNew">
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton text="Fields" path="fields"}}
+  {{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">New Fields</h1>
+  {{/contentFor}}
+
+  {{#contentFor "headerButtonRight"}}
+  <a href="{{pathFor 'fields'}}" class="button button-clear">{{> ionIcon icon="android-done-all"}}</a>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+      <div id="map" class="map"></div>
+    {{/ionContent}}
+  {{/ionView}}
+</template>
